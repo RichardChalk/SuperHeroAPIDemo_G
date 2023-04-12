@@ -19,7 +19,7 @@ builder.Services.AddTransient<DataInitializer>();
 
 var app = builder.Build();
 
-// Kör min SeedData() metod
+// Kör min MigrateData() metod
 using (var scope = app.Services.CreateScope())
 {
     scope.ServiceProvider.GetService<DataInitializer>().MigrateData();
